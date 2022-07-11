@@ -10,7 +10,7 @@ export default function Header(){
             <h1>DSMeta</h1>
             <p>
               Desenvolvido por
-              <a href="https://github.com/joaopaulolima-git">João Paulo Lima</a>
+              <a href="https://github.com/joaopaulolima-git">  João Paulo Lima</a>
             </p>
         </div>
     </header>
