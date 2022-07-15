@@ -21,12 +21,15 @@ export default function SalesCard(){
 
 
     useEffect(()=>{
-      axios.get(`${BASE_URL}/sales`)
+
+      const dmin = minDate.toISOString().slice(0, 10);
+      const dmax = maxDate.toISOString().slice(0, 10);     
+
+      axios.get(`${BASE_URL}/sales?minDate${dmin}&maxDate=${dmax}`)
       .then(response => {
-        setSale(response.data.content)
-        console.log(response.data)
+        setSale(response.data.content);        
       });
-    },[]);
+    },[minDate, maxDate]);
 
     return(
       <>
